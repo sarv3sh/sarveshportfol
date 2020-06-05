@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+
+    <!-- Put here your site title -->
+    <title>SARVESH | Developer</title>
+    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[username], [name], skill" />
+    <!-- Improve your SEO by adding a small descrption of you -->
+    <meta name="description" content="[Your name here] | Developer" />
+
+    <!-- Required librarys -->
+   <link href="style.css" rel="stylesheet">
+   <link href="bootstrap.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ reset: false });
+      import assignProps from './assignProps';
+export default function() {
+  const defaultProps = {
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    distance: '30px',
+    duration: 1000,
+    desktop: true,
+    mobile: true
+  };
+  
+  /* Section Title */
+  ScrollReveal().reveal('.section-title', 
+    assignProps(
+      {
+        delay:300,distance:'0px', 
+        origin:'bottom'
+      }, defaultProps)
+  );
+
+  /* Hero Section */
+  ScrollReveal().reveal('.hero-title', 
+    assignProps(
+      { 
+        delay: 500, 
+        origin: window.innerWidth > 768 ? 'left' : 'bottom'
+      }, defaultProps)
+  );
+  
+  ScrollReveal().reveal('.hero-cta', 
+    assignProps(
+      {
+        delay: 1000, 
+        origin: window.innerWidth > 768 ? 'left' : 'bottom'
+      }, defaultProps)
+  );
+
+  /* About Section */
+  ScrollReveal().reveal('.about-wrapper__image', 
+    assignProps(
+      {
+        delay: 600,
+        origin: 'bottom'
+      }, defaultProps)
+  );
+
+  ScrollReveal().reveal('.about-wrapper__info', 
+    assignProps(
+      {
+        delay: 1000,
+        origin: window.innerWidth > 768 ? 'left' : 'bottom'
+      }, defaultProps)
+  );
+
+  /* Projects Section */
+  ScrollReveal().reveal('.project-wrapper__text', 
+    assignProps(
+      {
+        delay: 500,
+        origin: window.innerWidth > 768 ? 'left' : 'bottom'
+      }, defaultProps)
+  );
+
+  ScrollReveal().reveal('.project-wrapper__image', 
+    assignProps(
+      {
+        delay: 1000,
+        origin: window.innerWidth > 768 ? 'right' : 'bottom'
+      }, defaultProps)
+  );
+
+  /* Contact Section */
+  ScrollReveal().reveal('.contact-wrapper', 
+    assignProps(
+      {
+        delay: 800,
+        origin: 'bottom'
+      }, defaultProps)
+  );
+}
+export default function (props, defaultProps) {
+  // Fix for SCRIPT1028 in Edge
+  return Object.assign({}, defaultProps, props);
+}import tilt from 'tilt.js';
+
+const initTilt = () => {
+  // Projects images
+  $('.project-wrapper__image a div').tilt({
+    maxTilt: 3,
+  });
+};
+
+export default initTilt;
+    </script>
+
+    <!-- Remove this script once you setup your custom portfolio -->
+    
+
+  </head>
+
+  <!-- Follow the HTML instructions to create your stunning portfolio website -->
+  <body>
+    <div id="top"></div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SARVESH.P</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#hero">Home</a></li>
+              <li><a href="#about">About ME</a></li>
+              <li><a href="#projects">Project</a></li>
+               
+               
+               
+
+              <!-- the end of the dropdown menu -->
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+    <!-- **** Hero Section **** -->
+    <div id="hero" class="jumbotron" style="background-color: lightgrey;">
+      <div class="container">
+        <h1 class="hero-title" class="load-hidden">
+          Hello World <span class="text-color-main">It's Sarvesh!</span>
+          <br />
+          <div class="col-lg-12 mx-auto ">
+           <p class=" mb-5"><mark><em>“If you always do what you always did, you will always get what you always got.”</em> <br /><strong>― Albert Einstein</strong></mark></p>
+         
+        </h1>
+        <p class="hero-cta" class="load-hidden">
+          <a class="cta-btn cta-btn--hero" href="#about">Know more</a>
+        </p>
+      </div>
+      </div>
+    </div>
+    <!-- /END Hero Section -->
+
+    <!-- **** About Section **** -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">
+          About me
+        </h2>
+        <div class="row about-wrapper">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image">
+              <img
+                class="img-fluid rounded shadow-lg"
+                height="auto"
+                width="300px"
+                style="border-radius: 1000px;"
+                src="https://scontent.fblr13-1.fna.fbcdn.net/v/t1.0-9/82766900_1346779655508681_8920688769334509568_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_oc=AQmqy3ClJC9Y05_y6yy0Qt4N9iA36H4afid9qPrT4j4ZImUjgpbrecfyXK4H2jATkoE&_nc_ht=scontent.fblr13-1.fna&oh=6c4f4c2d055ae84f478e4ae282225a2a&oe=5EEDC3BF"
+                alt="Profile Image"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info">
+              
+              <p class="mysize" style="font-size: large;">
+                Hi! My name is Sarvesh and I am an undergraduate student pursuing my Bachelour of engineering degree BE in Electronic and Communication stream (ECE) at Sri krishna college of engineering and technology [SKCET].I am a Outstanding Undergraduate student and talented developer.Currently, i'm doing my final year of undergradute studies and seeking for job.
+              </p>
+              <p class="about-wrapper__info-text" style="font-size: large;">
+                 I am looking forward to work with an organization which provides me an ample opportunity to explore my Technical skills towards organizational goals and be an ultimate resource to the organization
+              </p>
+              <span class="d-flex mt-3">
+                <a target="_blank" class="cta-btn cta-btn--resume" href="https://drive.google.com/file/d/1-I4GyArmsXZMV4QjA2BH29443MAdiIFs/view?usp=sharing"style="font-size: large;">
+                  View Resume
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END About Section -->
+
+    <!-- **** Projects Section **** -->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title" style="color: black;">
+            Projects
+          </h2>
+
+          <!-- Each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Online banking system</h3>
+                <div>
+                  <p class="mb-4">
+                    A web application which was built using <strong>HTML, CSS, JAVASCRIPT</strong> and <strong>MY SQL</strong> which helps the customer to look at the interesting information about the bank and also help to sign-up with the bank.
+                  </p>
+                </div>
+                
+               
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <a href="#!" target="_blank">
+                  <div >
+                    <img  style="height: 150px;" src="https://www.paisabazaar.com/wp-content/uploads/2018/12/internet-banking-1-.jpg" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Google Map Store Locator</h3>
+                <div>
+                  <p class="mb-4">
+                     A Web application which was built using <strong>HTML, CSS ,JAVASCRIPT</strong> and<strong>BOOTSTRAP</strong>.Created this application from the scratch, which helps the people to track the store in their location using pin-code.
+                  </p>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <a href="#!" target="_blank">
+                  <div >
+                    <img class="img-fluid" style="height: 120px;" src="file:///Users/sarvesh/Desktop/Image%2027-05-20%20at%2010.32%20AM.jpg" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Automated Level Crossing System</h3>
+                <div>
+                  <p class="mb-4">
+                    Created a working model using <strong>IR SENSOR ,MOTOR DRIVERS and ARDUINO</strong> microcontroller to automate the railway level crosiing system.
+                  </p>
+                </div>
+                
+                <a target="_blank" class="cta-btn text-color-main" href="https://drive.google.com/file/d/1oNAiJ1d5fzPCWD_s9YdDXSzOzYYNiqZj/view?usp=sharing">
+                  Document
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <a href="#!" target="_blank">
+                  <div >
+                    <img class="img-fluid" style="height: 155px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_7qN0cqqJJXR74xhMvpH1r_5SPDr_R7cFUmxaxEBW0ibzgyCP&usqp=CAU" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- /END Projects Section -->
+
+    <!-- **** Contact Section **** -->
+  <!  <section id="contacts" >
+      <div class="container">
+        <h2 class="section-title">
+          Contact
+        </h2>
+        <div class="contact-wrapper">
+          <p class="contact-wrapper__text">
+            Let's Get In Touch!
+          </p>
+          <a
+            target="_blank"
+            class="cta-btn cta-btn--resume"
+            href="mailto:sarveshpanneer13@email.com"
+            >Call to Action</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- /END Contact Section -->
+
+    <!-- **** Footer Section **** -->
+    <footer class="footer navbar-static-bottom" >
+      <div class="container">
+        <a href="#top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a href="https://twitter.com/IAmPSarvesh" target="_blank">
+            <i class="fa fa-twitter fa-inverse"></i>
+            Twitter
+          </a>
+          <a href="https://www.instagram.com/13_sarvesh/" target="_blank">
+            <i class="fa fa-codepen fa-inverse"></i>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/sarvesh-p-developer/?trk=public-profile-join-page" target="_blank">
+            <i class="fa fa-linkedin fa-inverse"></i>
+            Linkedin
+          </a>
+          <a href="https://github.com/sarv3sh/p" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
+            Github
+          </a>
+        </div>
+
+        <hr />
+
+        <!-- If you give me some credit, will be huge for me :) -->
+        <p class="footer__text" >
+          © 2020 - Template developed by Sarvesh</a>
+          </a>
+        </p>
+
+        <!-- Remove this paragraph once you setup your custom portfolio -->
+        
+        </p>
+      </div>
+    </footer>
+    <!-- /END Footer Section -->
+  </body>
+</html>
+
